@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine;
+using PFLink;
 
 public class CallTestView : MonoBehaviour
 {
@@ -17,12 +18,12 @@ public class CallTestView : MonoBehaviour
 
     public void OnSimpleDeepLinkButtonClicked()
     {
-        DeepLinkCall.SimpleLinkURLScheme( urlScheme, param + "Simple" );
+        // DeepLinkCall.SimpleLinkURLScheme( urlScheme, param + "Simple" );
     }
 
     public void OnDeepLinkButtonClicked()
     {
-        DeepLinkCall.LinkURLScheme( urlScheme, packageName, param, androidStoreURL, iosAppID );
+        // DeepLinkCall.LinkURLScheme( urlScheme, packageName, param, androidStoreURL, iosAppID );
     }
 
 }
