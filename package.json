@@ -11,7 +11,7 @@
       {
           "displayName": "PFLink Sample.",
           "description": "PFLink Sample Scene.",
-          "path": "Samples/SampleScene01/"
+          "path": "PFLinkSamples/SampleScene01/"
       }
   ]
   }
