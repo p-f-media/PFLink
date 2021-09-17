@@ -1,6 +1,6 @@
 {
     "name": "media.pf.pflink",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "displayName": "PFLink",
     "description": "To PetitFour Link.",
     "unity": "2020.3",
