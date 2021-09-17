@@ -690,11 +690,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 832316149}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3f24a3bbd149c045bafcc1852792c30, type: 3}
+  m_Script: {fileID: 11500000, guid: 8cda7c50e0671844585843367e604d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  urlScheme: p-f
-  param: ?url=aaa1234
+  param: ?param=1234
   packageName: 
   androidStoreURL: https://play.google.com/store/apps/details?id=
   iosAppID: 
