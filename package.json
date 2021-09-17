@@ -5,5 +5,13 @@
     "description": "To PetitFour Link.",
     "unity": "2020.3",
     "dependencies": {
-    }
+    },
+    "samples": 
+    [
+      {
+          "displayName": "PFLink Sample.",
+          "description": "PFLink Sample Scene.",
+          "path": "Samples/SampleScene01/"
+      }
+  ]
   }

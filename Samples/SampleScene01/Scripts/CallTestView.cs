@@ -5,7 +5,6 @@ using PFLink;
 
 public class CallTestView : MonoBehaviour
 {
-    [SerializeField] string urlScheme = "testUrlScheme";
     [SerializeField] string param = "?param=1234";
     [SerializeField] string packageName = "";
     [SerializeField] string androidStoreURL = "https://play.google.com/store/apps/details?id=";
