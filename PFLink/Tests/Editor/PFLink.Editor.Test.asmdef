@@ -1,0 +1,17 @@
+{
+    "name": "PFLink.Editor.Test",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c7a1c0ae17b906b42b7cdc7aefc2fdc3",
+        "GUID:21ad3f4b5c7acf844bb1ff0ee01fec00"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
