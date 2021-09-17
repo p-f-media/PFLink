@@ -17,12 +17,12 @@ public class CallTestView : MonoBehaviour
 
     public void OnSimpleDeepLinkButtonClicked()
     {
-        // DeepLinkCall.SimpleLinkURLScheme( urlScheme, param + "Simple" );
+        DeepLinkCall.SimpleLinkToPetitFour( param + " #SimpleLink." );
     }
 
     public void OnDeepLinkButtonClicked()
     {
-        // DeepLinkCall.LinkURLScheme( urlScheme, packageName, param, androidStoreURL, iosAppID );
+        DeepLinkCall.LinkToPetitFour( param, packageName, androidStoreURL, iosAppID );
     }
 
 }

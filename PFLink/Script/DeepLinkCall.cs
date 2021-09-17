@@ -26,7 +26,7 @@ namespace PFLink
         /// </summary>
         /// <param name="paramString"> パラメータ文字列. </param>
         // -----------------------------------------------------------------------------------------
-        public static void SimpleLinkURLScheme( string paramString = "" )
+        public static void SimpleLinkToPetitFour( string paramString = "" )
         {
             Application.OpenURL( pfURLScheme + "://" + paramString );
         }
