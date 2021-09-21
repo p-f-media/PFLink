@@ -21,7 +21,7 @@
 
 ### 簡易接続
 ```
-DeepLinkCall.SimpleLinkToPetitFour( string paramString = "" )
+DeepLinkCall.SimpleLinkToPetitFour( string paramString = "", string customHeader = "" )
 ```
 
 を実行すると、Application.OpenURL( string url )で簡易的にプチフルアプリを開きます。
@@ -29,6 +29,7 @@ DeepLinkCall.SimpleLinkToPetitFour( string paramString = "" )
 
 ```
 paramString : パラメータとなる文字列（URLなど）
+customHeader : パラメータの前につける文字列。（未入力の場合?param=になります）
 ```  
   
 
@@ -38,7 +39,8 @@ paramString : パラメータとなる文字列（URLなど）
 DeepLinkCall.LinkToPetitFour( string paramString = "", 
                               string packageName = "",
                               string androidStoreURL = "https://play.google.com/store/apps/details?id=", 
-                              string iosAppId = "" )
+                              string iosAppId = "",
+                              string customHeader = "" )
 ```
 
 を実行すると、ネイティブプラグインを使用してプチフルアプリを起動します。  
@@ -48,6 +50,7 @@ paramString : パラメータとなる文字列（URLなど）
 packageName : パッケージ名
 androidStoreURL : Androidの際のGoogleStoreURL（IDを含める）
 iosAppId : IOSの際のアプリID
+customHeader : パラメータの前につける文字列。（未入力の場合?param=になります）
 ```  
   
 ***********************************************************************

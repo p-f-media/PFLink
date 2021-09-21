@@ -2,6 +2,7 @@
 // using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using System;
 
 namespace PFLink
 {
@@ -30,8 +31,23 @@ namespace PFLink
         // -----------------------------------------------------------------------------------------
         public static void SimpleLinkToPetitFour( string paramString = "", string customHeader = "" )
         {
-            if( string.IsNullOrEmpty( customHeader ) == true ) Application.OpenURL( pfURLScheme + "://" + paramHeader + paramString );
-            else Application.OpenURL( pfURLScheme + "://" + customHeader + paramString );
+            Uri uri = null;
+            string url = "";
+            try
+            {
+                if( string.IsNullOrEmpty( customHeader ) == true ) uri = new Uri( pfURLScheme + "://" + paramHeader + paramString );
+                else  uri = new Uri( pfURLScheme + "://" + customHeader + paramString );
+
+                url = uri.AbsoluteUri;
+            }
+            catch
+            {
+                if( string.IsNullOrEmpty( customHeader ) == true ) url = pfURLScheme + "://" + paramHeader + paramString;
+                else  url = pfURLScheme + "://" + customHeader + paramString;
+            }
+            
+            url = uri.AbsoluteUri;
+            Application.OpenURL( url );
         }
 
         // -----------------------------------------------------------------------------------------
@@ -50,10 +66,21 @@ namespace PFLink
                                             string iosAppId = "",
                                             string customHeader = "" )
         {
+            Uri uri = null;
             string url = "";
-            if( string.IsNullOrEmpty( customHeader ) == true ) url = pfURLScheme + "://" + paramHeader + paramString;
-            else url = pfURLScheme + "://" + customHeader + paramString;
+            try
+            {
+                if( string.IsNullOrEmpty( customHeader ) == true ) uri = new Uri( pfURLScheme + "://" + paramHeader + paramString );
+                else  uri = new Uri( pfURLScheme + "://" + customHeader + paramString );
 
+                url = uri.AbsoluteUri;
+            }
+            catch
+            {
+                if( string.IsNullOrEmpty( customHeader ) == true ) url = pfURLScheme + "://" + paramHeader + paramString;
+                else  url = pfURLScheme + "://" + customHeader + paramString;
+            }
+            
             if( Application.platform == RuntimePlatform.Android )
             {
             #if UNITY_ANDROID
