@@ -7,7 +7,7 @@ public class CallTestView : MonoBehaviour
 {
     [SerializeField] string ver = "0.1.0";
     [SerializeField] Text verText = null;
-    [SerializeField] string param = "?param=1234";
+    [SerializeField] string param = "1234";
     [SerializeField] string packageName = "";
     [SerializeField] string androidStoreURL = "https://play.google.com/store/apps/details?id=";
     [SerializeField] string iosAppID = "";

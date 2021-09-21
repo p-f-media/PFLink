@@ -13,6 +13,7 @@ namespace PFLink
     public class DeepLinkCall : MonoBehaviour
     {    
         static string pfURLScheme = "p-f";
+        static string paramHeader = "?param=";
 
         void Start()
         {
@@ -25,10 +26,12 @@ namespace PFLink
         /// 単純なOPENURLでのURLスキームへのアクセス.
         /// </summary>
         /// <param name="paramString"> パラメータ文字列. </param>
+        /// <param name="customHeader"> パラメータ前につける文字列（未入力でparamHeaderになる）. </param>
         // -----------------------------------------------------------------------------------------
-        public static void SimpleLinkToPetitFour( string paramString = "" )
+        public static void SimpleLinkToPetitFour( string paramString = "", string customHeader = "" )
         {
-            Application.OpenURL( pfURLScheme + "://" + paramString );
+            if( string.IsNullOrEmpty( customHeader ) == true ) Application.OpenURL( pfURLScheme + "://" + paramHeader + paramString );
+            else Application.OpenURL( pfURLScheme + "://" + customHeader + paramString );
         }
 
         // -----------------------------------------------------------------------------------------
@@ -39,13 +42,17 @@ namespace PFLink
         /// <param name="packageName"> パッケージネーム. </param>
         /// <param name="androidStoreURL"> AndroidのストアURL（アプリIDも含める）. </param>
         /// <param name="iosAppId"> IOSのあぷりID. </param>
+        /// <param name="customHeader"> パラメータ前につける文字列（未入力でparamHeaderになる）. </param>
         // -----------------------------------------------------------------------------------------
         public static void LinkToPetitFour( string paramString = "", 
                                             string packageName = "",
                                             string androidStoreURL = "https://play.google.com/store/apps/details?id=", 
-                                            string iosAppId = "" )
+                                            string iosAppId = "",
+                                            string customHeader = "" )
         {
-            var url = pfURLScheme + "://" + paramString;
+            string url = "";
+            if( string.IsNullOrEmpty( customHeader ) == true ) url = pfURLScheme + "://" + paramHeader + paramString;
+            else url = pfURLScheme + "://" + customHeader + paramString;
 
             if( Application.platform == RuntimePlatform.Android )
             {

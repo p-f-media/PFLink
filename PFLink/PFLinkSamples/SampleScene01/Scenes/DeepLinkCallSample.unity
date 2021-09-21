@@ -693,7 +693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ver: 0.1.2
   verText: {fileID: 1222739021}
-  param: ?param=1234
+  param: 1234
   packageName: 
   androidStoreURL: https://play.google.com/store/apps/details?id=
   iosAppID: 
